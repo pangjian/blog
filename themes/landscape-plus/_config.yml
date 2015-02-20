@@ -33,7 +33,7 @@ fb_admins:
 fb_app_id:
 
 # Duoshuo
-duoshuo_shortname: 
+duoshuo_shortname: IO10
 
 # Baidu share
 baidushare: true
