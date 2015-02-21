@@ -2,6 +2,7 @@
 menu:
   Home: /
   Archives: /archives
+  About: /About
 rss: /atom.xml
 
 # Content
@@ -31,6 +32,7 @@ twitter:
 google_plus:
 fb_admins: 
 fb_app_id:
+baidu_tongji: true
 
 # Duoshuo
 duoshuo_shortname: IO10
