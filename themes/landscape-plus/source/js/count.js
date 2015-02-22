@@ -14,7 +14,7 @@ io10blogFirebase.child("sum").transaction(function (current_counter) {
 });
 
 // 明细
-var current_url = window.location.pathname.replace(new RegExp('\\/|\\.', 'g'),"_");
+var current_url = decodeURI(window.location.pathname.replace(new RegExp('\\/|\\.', 'g'),"_"));
 
 io10blogFirebase.child("detail/"+current_url).transaction(function (current_counter) {
   return (current_counter || 0) + 1;
