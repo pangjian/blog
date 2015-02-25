@@ -86,6 +86,7 @@ plugins:
 - hexo-generator-feed
 - hexo-generator-sitemap
 - hexo-generator-baidu-sitemap
+- hexo-tag-video
 
 
 # Deployment

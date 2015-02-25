@@ -3,11 +3,12 @@
   "version": "2.8.3",
   "private": true,
   "dependencies": {
-    "hexo-renderer-ejs": "*",
-    "hexo-renderer-stylus": "*",
-    "hexo-renderer-marked": "*",
     "hexo-generator-baidu-sitemap": "*",
+    "hexo-generator-feed": "*",
     "hexo-generator-sitemap": "*",
-    "hexo-generator-feed": "*"
+    "hexo-renderer-ejs": "*",
+    "hexo-renderer-marked": "*",
+    "hexo-renderer-stylus": "*",
+    "hexo-tag-video": "0.0.2"
   }
 }
