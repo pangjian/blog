@@ -17,5 +17,49 @@ photos:
 ##FireBase基本用法
 
 ##在你的HEXO页面上引入FireBase
+在页面的head中引入FireBase的js，
+```html
+<script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
+```
+为了加速，也可以将这个js放到自己的七牛云存储上。
 
 ##增加代码调用FireBase来实现记录访问数
+
+首先new出自己的FireBase
+```javascript
+var io10blogFirebase = new Firebase("https://io10.firebaseio.com/");
+```
+然后获取访问总量以及明细
+```javascript
+// 明细由当前页面的url表示，将反斜线替换成下划线，并将中文decode出来
+var current_url = decodeURI(window.location.pathname.replace(new RegExp('\\/|\\.', 'g'),"_"));
+// 获取总数，并将总访问量展示在页面上
+io10blogFirebase.child("sum").on("value", function(data) {
+  var current_counter = data.val();
+  if( $("#sum_counter").length > 0  && current_counter >1 ){
+      $("#sum_counter").html(
+   	   	"&nbsp;|&nbsp;总访问量&nbsp;<font style='color:white'>"+ current_counter +"</font>&nbsp;次"
+       );
+  };
+});
+// 获取明细，并将明细也展示在页面上
+io10blogFirebase.child("detail/"+current_url).on("value", function(data){
+	var detail_counter = data.val();
+	if($("#detail_counter").length > 0 && detail_counter > 1){
+		$("#detail_counter").html(
+			"&nbsp;本页访问量&nbsp;<font style='color:white'>"+ detail_counter +"</font>&nbsp;次"
+		);
+	}
+});
+```
+将访问数+1，包括总数和明细
+```javascript
+// 总数+1
+io10blogFirebase.child("sum").transaction(function (current_counter) {
+  return (current_counter || 0) + 1;
+});
+// 明细+1
+io10blogFirebase.child("detail/"+current_url).transaction(function (current_counter) {
+  return (current_counter || 0) + 1;
+});
+```
