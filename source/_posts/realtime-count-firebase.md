@@ -1,4 +1,4 @@
-title: 基于FireBase的Hexo博客实时访问数统计-未完成
+title: 基于Firebase的Hexo博客实时访问数统计-未完成
 date: 2015-02-27 15:12:06
 tags: [技术,firebase,hexo]
 photos:
@@ -10,22 +10,47 @@ photos:
 
 <!--more-->
 
-##注册FireBase账号
+##注册Firebase账号
 
 ##创建应用
 
-##FireBase基本用法
+##Firebase基本用法
+Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将数组转换成一个Object对象来存储，就像这样。
+```javascript
+['a', 'b', 'c', 'd', 'e']
+```
+会被转换成这样存储
+```javascript
+{0: 'a', 1: 'b', 2: 'c', 3: 'd', 4: 'e'}
+```
 
-##在你的HEXO页面上引入FireBase
-在页面的head中引入FireBase的js，
+##在你的HEXO页面上引入Firebase
+在页面的head中引入Firebase的js，
 ```html
 <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 ```
 为了加速，也可以将这个js放到自己的七牛云存储上。
 
-##增加代码调用FireBase来实现记录访问数
+##增加代码调用Firebase来实现记录访问数
+先修改页面的footer用来展示访问记录数，就像这样。当然你可以加在页面的任意位置。
+```html
+<footer id="footer">
+  <% if (theme.sidebar === 'bottom'){ %>
+    <%- partial('_partial/sidebar') %>
+  <% } %>
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      .
+      <font id="sum_counter"></font>
+      <font id="detail_counter"></font>
+    </div>
+  </div>
+</footer>
+```
 
-首先new出自己的FireBase
+首先new出自己的Firebase
 ```javascript
 var io10blogFirebase = new Firebase("https://io10.firebaseio.com/");
 ```

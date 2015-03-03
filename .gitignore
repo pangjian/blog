@@ -1,6 +1,7 @@
 .DS_Store
 Thumbs.db
 debug.log
+db.json
 public/
 .deploy/
-db.json
+
