@@ -27,6 +27,21 @@ Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将
 ```javascript
 {0: 'a', 1: 'b', 2: 'c', 3: 'd', 4: 'e'}
 ```
+###存储数据
+####`set()`
+`set()`方法调用若原先没有值则会新增，若原先有值，会覆盖原有的结构替换成这次的内容包括子节点！
+####`update()`
+`update()`可以更新一个已经存在的值，并且不会覆盖其他内容。
+####`transaction()`
+`transaction()`就是本文用来统计访问量的方法。支持在原有值得基础上进行修改，它的参数是一个回调函数，用来处理原有的值使其变成新的值。下面是官方给的例子，就是用来统计访问量的。
+```javascript
+var upvotesRef = new Firebase('https://docs-examples.firebaseio.com/android/saving-data/fireblog/posts/-JRHTHaIs-jNPLXOQivY/upvotes');
+upvotesRef.transaction(function (current_value) {
+  return (current_value || 0) + 1;
+});
+```
+###读取数据
+firebase可以绑定比如`child_added`、`Child Removed`、`value`等事件，每当有子元素添加或者值变化时会触发绑定的回调函数。具体调用方法可以参考本文后面提到的方法。
 
 ##在你的HEXO页面上引入Firebase
 在页面的head中引入Firebase的js，
@@ -101,3 +116,5 @@ io10blogFirebase.child("detail/"+current_url).transaction(function (current_coun
 下面这幅图是Firebase的应用管理界面，这个界面的数也是实时在变化的。
 
 ![DashBoard](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/FirebaseDash.PNG)
+
+这样，实时访问统计就可以实现啦！这里只是打开了一个思路，Firebase等于给静态网站添加上了可以实时存储于读取数据的翅膀。除了统计访问量，它能做的事情很多很多。甚至替换掉多说，自己实现一个评论系统都是有可能的！
