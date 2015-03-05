@@ -1,4 +1,4 @@
-title: 基于Firebase的Hexo博客实时访问数统计-未完成
+title: 基于Firebase的Hexo博客实时访问数统计
 date: 2015-02-27 15:12:06
 tags: [技术,firebase,hexo]
 photos:
@@ -11,8 +11,12 @@ photos:
 <!--more-->
 
 ##注册Firebase账号
+在[Firebase官网](www.firebase.com)注册一个新用户
+![Sign Up](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/signup.PNG)
 
 ##创建应用
+注册成功以后就可以创建一个应用了
+![create app](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/createApp.PNG)
 
 ##Firebase基本用法
 Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将数组转换成一个Object对象来存储，就像这样。
@@ -32,6 +36,12 @@ Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将
 为了加速，也可以将这个js放到自己的七牛云存储上。
 
 ##增加代码调用Firebase来实现记录访问数
+###思路：
+1.总共记录两类访问记录，一个总数，一个该页面数
+2.该页面数使用该页面的url作为key值
+3.每次访问一个页面时，总数+1，本页面数+1
+4.同时增加记录最后更新时间，和最后更新的那个页面的url
+###过程：
 先修改页面的footer用来展示访问记录数，就像这样。当然你可以加在页面的任意位置。
 ```html
 <footer id="footer">
@@ -88,3 +98,6 @@ io10blogFirebase.child("detail/"+current_url).transaction(function (current_coun
   return (current_counter || 0) + 1;
 });
 ```
+下面这幅图是Firebase的应用管理界面，这个界面的数也是实时在变化的。
+
+![DashBoard](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/FirebaseDash.PNG)
