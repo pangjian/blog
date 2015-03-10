@@ -13,6 +13,7 @@ mathjax: false
 # Sidebar
 sidebar: right
 widgets:
+- visitor_info
 - category
 - tag
 - tagcloud

@@ -40,3 +40,28 @@ io10blogFirebase.child("detail/"+current_url).transaction(function (current_coun
 var n = new Date();
 var time = n.getFullYear()+'-'+(n.getMonth()+1)+'-'+n.getDate()+'_'+n.getHours()+':'+n.getMinutes()+':'+n.getSeconds()+' '+n.getMilliseconds();
 io10blogFirebase.child("lastupdatetime").set({ timer: time, url: current_url });
+
+
+
+var visitorCounter = new Firebase("https://visitor.firebaseio.com/");
+
+var visitorFP = canvasFP.getFP();
+
+io10blogVisitorCounter.child(visitorFP).transaction(function (counter) {
+  return (counter || 0) + 1;
+});
+
+io10blogVisitorCounter.child(visitorFP).on("value",function(data){
+  count_value = data.val();
+  if(count_value > 1){
+    //这是你第n次访问本站啦
+    if($("#welcome_counter").length > 0){
+      $("#welcome_counter").html("这是你第&nbsp;"+count_value+"&nbsp;次访问本站啦");
+    }
+  } else{
+    //欢迎你第一次访问本站
+    if($("#welcome_counter").length > 0){
+      $("#welcome_counter").html("欢迎你第一次访问本站");
+    }
+  }
+});
