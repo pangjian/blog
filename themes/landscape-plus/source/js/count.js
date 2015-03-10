@@ -43,7 +43,7 @@ io10blogFirebase.child("lastupdatetime").set({ timer: time, url: current_url });
 
 
 
-var visitorCounter = new Firebase("https://visitor.firebaseio.com/");
+var io10blogVisitorCounter = new Firebase("https://visitorcount.firebaseio.com/");
 
 var visitorFP = canvasFP.getFP();
 

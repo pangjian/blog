@@ -32,4 +32,4 @@ var canvasFP = {
 		}
 		return o;
 	}
-}
+};
