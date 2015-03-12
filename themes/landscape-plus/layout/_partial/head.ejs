@@ -5,6 +5,10 @@
   <meta charset="utf-8">
   <meta name="baidu-site-verification" content="ttL42am4mF" />
   <meta name="google-site-verification" content="DZcJwjBM_8H7cKT7YvFkwzIndJ7BMyKZpGd09Hz3IYs" />
+  <!-- Set render engine for 360 browser -->
+  <meta name="renderer" content="webkit">
+  <!-- No Baidu Siteapp-->
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
   <%
   var title = page.title;
 
@@ -30,6 +34,19 @@
   <% } %>
   <% if (theme.favicon){ %>
     <link rel="icon" href="<%- theme.favicon %>">
+  <% } %>
+  <% if (theme.appicon){ %>
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <link rel="icon" sizes="192x192" href="<%- theme.appicon %>">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <link rel="apple-touch-icon-precomposed" href="<%- theme.appicon %>">
+
+  <!-- Tile icon for Win8 (144x144 + tile color) -->
+  <meta name="msapplication-TileImage" content="<%- theme.appicon %>">
   <% } %>
   <%- css('css/style') %>
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
