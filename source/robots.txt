@@ -1,1 +1,7 @@
+﻿User-Agent: Baiduspider
+Allow: /
+
+User-Agent: *
+Allow: /
+
 Sitemap: /sitemap.xml
