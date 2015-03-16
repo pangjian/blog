@@ -9,6 +9,11 @@
   <meta name="renderer" content="webkit">
   <!-- No Baidu Siteapp-->
   <meta http-equiv="Cache-Control" content="no-siteapp"/>
+
+<% if (page.photos && page.photos.length){ %>
+  <meta property="st:image" content="<%- url_for(page.photos[0]) %>">
+<% } %>
+
   <%
   var title = page.title;
 
