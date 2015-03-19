@@ -9,7 +9,7 @@ io10blogFirebase.child("sum").on("value", function(data) {
   var current_counter = data.val();
   if( $("#sum_counter").length > 0  && current_counter >1 ){
       $("#sum_counter").html(
-   	   	"&nbsp;|&nbsp;总访问量&nbsp;<font style='color:white'>"+ current_counter +"</font>&nbsp;次"
+   	   	"总访问量&nbsp;<font style='color:white'>"+ current_counter +"</font>&nbsp;次"
        );
   };
 });
