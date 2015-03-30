@@ -93,4 +93,6 @@ plugins:
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
   type: github
-  repo: https://github.com/pangjian/pangjian.github.io.git
+  repo: https://gitcafe.com/pangjian/pangjian.git
+  #repo: https://github.com/pangjian/pangjian.github.io.git
+  branch: gitcafe-pages
