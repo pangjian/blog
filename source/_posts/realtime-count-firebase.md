@@ -77,7 +77,7 @@ firebase可以绑定比如`child_added`、`Child Removed`、`value`等事件，�
 
 首先new出自己的Firebase
 ```javascript
-var io10blogFirebase = new Firebase("https://io10.firebaseio.com/");
+var io10blogFirebase = new Firebase("https://io10test.firebaseio.com/");
 ```
 然后获取访问总量以及明细
 ```javascript
