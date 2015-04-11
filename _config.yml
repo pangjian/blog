@@ -92,9 +92,9 @@ plugins:
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
 deploy:
-- type: github
+- type: git
+  repo: https://github.com/pangjian/pangjian.github.io.git
+  branch: master
+- type: git
   repo: https://gitcafe.com/pangjian/pangjian.git
   branch: gitcafe-pages
-
-- type: github
-  repo: https://github.com/pangjian/pangjian.github.io.git
