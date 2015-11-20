@@ -27,28 +27,18 @@ Usage: browserify [entry files] {OPTIONS}
 Standard Options:
 
     --outfile, -o  browserify日志打印到文件
-
     --require, -r  绑定模块名或文件，用逗号分隔
-
     --entry, -e  应用程序的入口
-
     --ignore, -i  Replace a file with an empty stub. Files can be globs.
-
     --exclude, -u  Omit a file from the output bundle. Files can be globs.从其他绑定引入文件
-
     --external, -x  Reference a file from another bundle. Files can be globs.
-
     --transform, -t  Use a transform module on top-level files.
-
     --command, -c  Use a transform command on top-level files.
-
     --standalone -s  Generate a UMD bundle for the supplied export name.
                    This bundle works with other module systems and sets the name
                    given as a window global if no module system is found.
-
     --debug -d  Enable source maps that allow you to debug your files separately.
               激活source maps调试文件
-
     --help, -h  Show this message 帮助
 ```
 
@@ -78,5 +68,17 @@ $ browserify index.js > bundle.js
 查看浏览器端运行结果：
 ![浏览器端运行结果](http://7vzqg8.com1.z0.glb.clouddn.com/node-on-browser-browserify/browserResult.png)
 
+当然，你肯定不能满足于将所有脚本全部打包成一个js文件，仅仅在`script`标签上引用进来。你需要的也许是将某个模块打包，然后在浏览器的js中使用`require(module)`来调用这个模块，这也正是我需要的。那么你需要在执行预编译的时候加上`-r`参数即可。
 
+```shell
+$ browserify -r outputName.js:ouputname > bundle.js
+```
+冒号后面是你指定的模块名称，这样你就可以在script标签中这么使用：
+```html
+<script>
+	var outputname = require('ouputname');
+	outputname('pangjian');
+</script>
+```
+好了，大功告成，接下来就是发挥你想象的时间。
 
