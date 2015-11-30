@@ -10,7 +10,7 @@ Nodejs将javascript带上了一个新的高度，让之运行于浏览器端的j
 <!--more-->
 
 #背景
-[前面一片博客](http://www.pangjian.info/2015/09/15/recent-thinking-2015-09/)提到了我需要一种前端解析Velocity模板的方法，终于找打一个好的方法。苦于代码是基于Nodejs的，readme中提示可以使用spm打包后使用，试了好多次都没有成功。无意间在知乎上发现了Browserify。，顺利满足需求，下一篇博客就会写这部分内容。
+[前面一片博客](http://www.pangjian.info/2015/09/15/recent-thinking-2015-09/)提到了我需要一种前端解析Velocity模板的方法，终于找到一个好的方法。苦于代码是基于Nodejs的，readme中提示可以使用spm打包后使用，试了好多次都没有成功。无意间在知乎上发现了Browserify。顺利满足需求，下一篇博客就会写这部分内容。
 
 #Browserify安装
 就像封面图片上那样，使用npm全局安装。
