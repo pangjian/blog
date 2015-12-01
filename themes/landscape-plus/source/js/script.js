@@ -182,7 +182,7 @@
 
 
   //jquery.pajax
-  $.pjax({
+  /*$.pjax({
     selector: '.article-more-link > a',
     container: '#main', //内容替换的容器
     show: 'fade',  //展现的动画，支持默认和fade, 可以自定义动画方式，这里为自定义的function即可。
@@ -191,6 +191,21 @@
     titleSuffix: '', //标题后缀
     filter: function(){},
     callback: function(){}
-  })
+  })*/
+if ($.support.pjax) {
+  $(document).pjax('a', '.pjax');
+  $(document).on({
+    'pjax:click': function() {
+      NProgress.start();
+    },
+    'pjax:start': function() {
+      console.log("pjax start...");
+    },
+    'pjax:end':function(){
+      NProgress.done();
+      console.log("pjax end...");
+    }
+  });
+}
 
 })(jQuery);
