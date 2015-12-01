@@ -10,7 +10,7 @@ var duoshuoQuery = {short_name:"<%= theme.duoshuo_shortname %>"};
     ds.type = 'text/javascript';ds.async = true;
     ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
     ds.charset = 'UTF-8';
-    (document.getElementsByTagName('head')[0] 
+    (document.getElementsByTagName('head')[0]
      || document.getElementsByTagName('body')[0]).appendChild(ds);
   })();
   </script>
@@ -46,7 +46,8 @@ var duoshuoQuery = {short_name:"<%= theme.duoshuo_shortname %>"};
 <% } %>
 <!-- 百度分享 end -->
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/jquery.pjax/1.9.6/jquery.pjax.min.js"></script>
 
 <% if (theme.fancybox){ %>
   <%- css('fancybox/jquery.fancybox') %>
@@ -67,3 +68,4 @@ var duoshuoQuery = {short_name:"<%= theme.duoshuo_shortname %>"};
 
   _st('install','-dFQ3V3gswysE7f5VTM_');
 </script>
+<%- partial('baidu_tongji') %>
