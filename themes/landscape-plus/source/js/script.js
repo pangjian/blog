@@ -193,7 +193,7 @@
     callback: function(){}
   })*/
 if ($.support.pjax) {
-  $(document).pjax('a', '.pjax');
+  $(document).pjax('a', '#main', { fragment: ('#main'), timeout: 10000 });
   $(document).on({
     'pjax:click': function() {
       NProgress.start();
@@ -209,3 +209,8 @@ if ($.support.pjax) {
 }
 
 })(jQuery);
+
+window.onbeforeunload = function(){
+  alert('1');
+  console.log('页面刷新了');
+}
