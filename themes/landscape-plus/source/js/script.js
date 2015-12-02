@@ -209,6 +209,22 @@ if ($.support.pjax) {
   });
   function afterPjax(){
     //多说展示
+    pajx_loadDuodsuo();
+    //访问量数据增加
+    showPageCounter();
+    showVisitorCounter();
+
+    //侧边栏自动回收
+  }
+  function pajx_loadDuodsuo(){
+    var dus=$(".ds-thread");
+    if($(dus).length==1){
+      var el = document.createElement('div');
+      el.setAttribute('data-thread-key',$(dus).attr("data-thread-key"));//必选参数
+      el.setAttribute('data-url',$(dus).attr("data-url"));
+      DUOSHUO.EmbedThread(el);
+      $(dus).html(el);
+    }
   }
 }
 
