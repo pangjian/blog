@@ -204,13 +204,16 @@ if ($.support.pjax) {
     'pjax:end':function(){
       NProgress.done();
       console.log("pjax end...");
+      afterPjax();
     }
   });
+  function afterPjax(){
+    //多说展示
+  }
 }
 
 })(jQuery);
 
 window.onbeforeunload = function(){
-  alert('1');
   console.log('页面刷新了');
 }
