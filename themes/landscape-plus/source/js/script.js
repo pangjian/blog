@@ -215,6 +215,7 @@ if ($.support.pjax) {
     showVisitorCounter();
 
     //侧边栏自动回收
+    hideMobileNav();
   }
   function pajx_loadDuodsuo(){
     var dus=$(".ds-thread");
@@ -225,6 +226,11 @@ if ($.support.pjax) {
       DUOSHUO.EmbedThread(el);
       $(dus).html(el);
     }
+  }
+
+  function hideMobileNav(){
+    if (isMobileNavAnim || !$container.hasClass('mobile-nav-on')) return;
+    $container.removeClass('mobile-nav-on');
   }
 }
 
