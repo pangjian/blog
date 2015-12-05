@@ -180,6 +180,12 @@
     $container.removeClass('mobile-nav-on');
   });
 
+  //nprogress config
+
+  NProgress.configure({ ease: 'ease', speed: 600 });
+  NProgress.configure({ trickleSpeed: 60 });
+
+
 
   //jquery.pajax
   /*$.pjax({
@@ -203,6 +209,7 @@ if ($.support.pjax) {
     },
     'pjax:end':function(){
       NProgress.done();
+      //setTimeout("NProgress.done()", 3000 );
       console.log("pjax end...");
       afterPjax();
     }
