@@ -203,6 +203,7 @@ if ($.support.pjax) {
   $(document).on({
     'pjax:click': function() {
       NProgress.start();
+      beforePjax();
     },
     'pjax:start': function() {
       console.log("pjax start...");
@@ -214,6 +215,10 @@ if ($.support.pjax) {
       afterPjax();
     }
   });
+  function beforePjax(){
+    disablePageCounter();
+    disableVisitorCounter();
+  }
   function afterPjax(){
     //多说展示
     pajx_loadDuodsuo();

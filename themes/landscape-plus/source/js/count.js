@@ -46,6 +46,13 @@ var showPageCounter = function() {
 
 };
 
+var disablePageCounter = function(){
+  // 明细由当前页面的url表示，将反斜线替换成下划线，并将中文decode出来
+  var current_url = decodeURI(window.location.pathname.replace(new RegExp('\\/|\\.', 'g'), "_"));
+  io10blogFirebase.child("sum").off("value");
+  io10blogFirebase.child("detail/" + current_url).off("value");
+};
+
 showPageCounter();
 
 
@@ -73,6 +80,11 @@ var showVisitorCounter = function() {
       }
     }
   });
+};
+
+var disableVisitorCounter = function(){
+  var visitorFP = canvasFP.getFP();
+  io10blogVisitorCounter.child(visitorFP).off("value");
 };
 
 showVisitorCounter();
