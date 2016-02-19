@@ -9,17 +9,17 @@ Nodejs将javascript带上了一个新的高度，让之运行于浏览器端的j
 
 <!--more-->
 
-#背景
+# 背景
 [前面一片博客](http://www.pangjian.info/2015/09/15/recent-thinking-2015-09/)提到了我需要一种前端解析Velocity模板的方法，终于找到一个好的方法。苦于代码是基于Nodejs的，readme中提示可以使用spm打包后使用，试了好多次都没有成功。无意间在知乎上发现了Browserify。顺利满足需求，下一篇博客就会写这部分内容。
 
-#Browserify安装
+# Browserify安装
 就像封面图片上那样，使用npm全局安装。
 
 ```shell
 $ npm install -g browserify
 ```
-#Browser使用
-##参数说明
+# Browser使用
+## 参数说明
 官方说明如下，部分选项做了翻译
 ```shell
 Usage: browserify [entry files] {OPTIONS}
@@ -42,7 +42,7 @@ Standard Options:
     --help, -h  Show this message 帮助
 ```
 
-##示例
+## 示例
 编写Nodejs服务端脚本，outputName.js，index.js
 ```javascript
 module.exports = function(name){
@@ -81,4 +81,3 @@ $ browserify -r outputName.js:ouputname > bundle.js
 </script>
 ```
 好了，大功告成，接下来就是发挥你想象的时间。
-

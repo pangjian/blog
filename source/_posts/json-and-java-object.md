@@ -9,10 +9,10 @@ photos:
 <!--more-->
 
 
-##JSON是什么？
+## JSON是什么？
 JSON（JavaScript Object Notation）是一种轻量级的数据交换格式。它基于JavaScript（Standard ECMA-262 3rd Edition - December 1999）的一个子集。JSON采用完全独立于语言的文本格式，但是也使用了类似于C语言家族的习惯（包括C、C++、C#、Java、JavaScript、Perl、Python等）。这些特性使JSON成为理想的数据交换语言。易于人阅读和编写，同时也易于机器解析和生成。
 
-###JSON的值可以是
+### JSON的值可以是
 * 数字number（整数获浮点数）
 ![number](http://7vzqg8.com1.z0.glb.clouddn.com/json-and-java-object/number.PNG)
 * 字符串string（在双引号获单引号中）
@@ -27,7 +27,7 @@ JSON（JavaScript Object Notation）是一种轻量级的数据交换格式。�
 
 所以说String、BigDecimal、List、Map、Integer都不是JSON的值，这些只是java中的类，在JavaScript中是不存在的。（作为Java开发者，不能手里拿着锤子就看什么都是钉子）
 
-##JSON示例
+## JSON示例
 ```JavaScript
 {
     "number":1234,
@@ -41,8 +41,8 @@ JSON（JavaScript Object Notation）是一种轻量级的数据交换格式。�
 }
 ```
 
-##Jackson
-##Java与JSON的映射关系（基于Jackson）
-##代码及运行结果
+## Jackson
+## Java与JSON的映射关系（基于Jackson）
+## 代码及运行结果
 
 * "number":1234

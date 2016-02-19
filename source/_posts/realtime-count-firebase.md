@@ -10,15 +10,15 @@ photos:
 
 <!--more-->
 
-##注册Firebase账号
+## 注册Firebase账号
 在[Firebase官网](www.firebase.com)注册一个新用户
 ![Sign Up](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/signup.PNG)
 
-##创建应用
+## 创建应用
 注册成功以后就可以创建一个应用了
 ![create app](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/createApp.PNG)
 
-##Firebase基本用法
+## Firebase基本用法
 Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将数组转换成一个Object对象来存储，就像这样。
 ```javascript
 ['a', 'b', 'c', 'd', 'e']
@@ -27,12 +27,12 @@ Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将
 ```javascript
 {0: 'a', 1: 'b', 2: 'c', 3: 'd', 4: 'e'}
 ```
-###存储数据
-####`set()`
+### 存储数据
+#### `set()`
 `set()`方法调用若原先没有值则会新增，若原先有值，会覆盖原有的结构替换成这次的内容包括子节点！
-####`update()`
+#### `update()`
 `update()`可以更新一个已经存在的值，并且不会覆盖其他内容。
-####`transaction()`
+#### `transaction()`
 `transaction()`就是本文用来统计访问量的方法。支持在原有值得基础上进行修改，它的参数是一个回调函数，用来处理原有的值使其变成新的值。下面是官方给的例子，就是用来统计访问量的。
 ```javascript
 var upvotesRef = new Firebase('https://docs-examples.firebaseio.com/android/saving-data/fireblog/posts/-JRHTHaIs-jNPLXOQivY/upvotes');
@@ -40,23 +40,23 @@ upvotesRef.transaction(function (current_value) {
   return (current_value || 0) + 1;
 });
 ```
-###读取数据
+### 读取数据
 firebase可以绑定比如`child_added`、`Child Removed`、`value`等事件，每当有子元素添加或者值变化时会触发绑定的回调函数。具体调用方法可以参考本文后面提到的方法。
 
-##在你的HEXO页面上引入Firebase
+## 在你的HEXO页面上引入Firebase
 在页面的head中引入Firebase的js，
 ```html
 <script src='https://cdn.firebase.com/js/client/2.0.4/firebase.js'></script>
 ```
 为了加速，也可以将这个js放到自己的七牛云存储上。
 
-##增加代码调用Firebase来实现记录访问数
-###思路：
+## 增加代码调用Firebase来实现记录访问数
+### 思路：
 1.总共记录两类访问记录，一个总数，一个该页面数
 2.该页面数使用该页面的url作为key值
 3.每次访问一个页面时，总数+1，本页面数+1
 4.同时增加记录最后更新时间，和最后更新的那个页面的url
-###过程：
+### 过程：
 先修改页面的footer用来展示访问记录数，就像这样。当然你可以加在页面的任意位置。
 ```html
 <footer id="footer">

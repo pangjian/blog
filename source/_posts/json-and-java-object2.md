@@ -5,7 +5,7 @@ photos:
 - http://7vzqg8.com1.z0.glb.clouddn.com/json-and-java-object/JSON.png
 ---
 
-#不符合驼峰规范的变量
+# 不符合驼峰规范的变量
 “驼峰命名法”请自行百度。简单的来说就是变量的第一个单词以小写字母开始其他单词首字母大写，或者全部单词首字母都大写，分别称为“小驼峰”和“大驼峰”
 <!--more-->
 比如一个符合驼峰规范命名的实体：
@@ -59,7 +59,7 @@ public class Entity {
 public class Entity {
     @JsonProperty
     String ECash;
-    
+
     @JsonIgnore
     public String getECash() {
         return ECash;
@@ -79,7 +79,7 @@ public class Entity {
 public class Entity {
     @JsonProperty("eCash")
     String ECash;
-    
+
     @JsonIgnore
     public String getECash() {
         return ECash;
@@ -94,4 +94,3 @@ public class Entity {
 {"eCash":null}
 ```
 举一反三，JsonProperty的使用场景还有很多，除了解决这个“坑”以外。还可以直接用来转换类UNIX习惯的下划线间隔的变量转化为驼峰规范。
-
