@@ -97,7 +97,7 @@ deploy:
   repo: git@github.com:pangjian/pangjian.github.io.git
   branch: master
 - type: git
-  repo: git@gitcafe.com:pangjian/pangjian.git
+  repo: git@git.coding.net:pangjian/pangjian.git
   branch: gitcafe-pages
 
 # Hexo Beautify
