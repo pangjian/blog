@@ -22,4 +22,4 @@ script:
 - hexo init
 - hexo clean
 - hexo g
-- hexo d
+- hexo deploy
