@@ -19,6 +19,7 @@ install:
 
 script:
 - hexo -version
+- hexo init
 - hexo clean
 - hexo g
 - hexo d
