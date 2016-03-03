@@ -84,6 +84,7 @@ theme: landscape-plus
 exclude_generator:
 
 plugins:
+- hexo-renderer-ejs
 - hexo-generator-feed
 - hexo-generator-seo-friendly-sitemap
 - hexo-generator-baidu-sitemap

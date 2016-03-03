@@ -3,7 +3,7 @@
   "version": "3.2.0",
   "private": true,
   "dependencies": {
-    "hexo": "^3.2.0",
+    "hexo": "3.1.1",
     "hexo-admin": "^1.1.1",
     "hexo-beautify": "^1.0.2",
     "hexo-deployer-git": "0.1.0",
@@ -23,6 +23,6 @@
     "hexo-tag-video": "0.0.2"
   },
   "hexo": {
-    "version": "3.2.0"
+    "version": "3.1.1"
   }
 }
