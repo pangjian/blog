@@ -15,3 +15,5 @@ photos:
 ## 将Firebase服务换成WildDog
 国内访问Firebase还是太慢，准备换成国内的类似服务。
 ## 将多说换成Disquse
+
+<!-- indicate-the-source -->

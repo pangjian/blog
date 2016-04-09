@@ -94,3 +94,4 @@ public class Entity {
 {"eCash":null}
 ```
 举一反三，JsonProperty的使用场景还有很多，除了解决这个“坑”以外。还可以直接用来转换类UNIX习惯的下划线间隔的变量转化为驼峰规范。
+<!-- indicate-the-source -->

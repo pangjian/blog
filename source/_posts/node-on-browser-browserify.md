@@ -81,3 +81,4 @@ $ browserify -r outputName.js:ouputname > bundle.js
 </script>
 ```
 好了，大功告成，接下来就是发挥你想象的时间。
+<!-- indicate-the-source -->

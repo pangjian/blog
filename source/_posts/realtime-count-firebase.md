@@ -118,3 +118,4 @@ io10blogFirebase.child("detail/"+current_url).transaction(function (current_coun
 ![DashBoard](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/FirebaseDash.PNG)
 
 这样，实时访问统计就可以实现啦！这里只是打开了一个思路，Firebase等于给静态网站添加上了可以实时存储于读取数据的翅膀。除了统计访问量，它能做的事情很多很多。甚至替换掉多说，自己实现一个评论系统都是有可能的！
+<!-- indicate-the-source -->

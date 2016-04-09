@@ -89,3 +89,4 @@ hexo server
 ![pangjian.info](http://7vzqg8.com1.z0.glb.clouddn.com/hexo-update-to-3-0/pangjian.info.png)
 
 还算是顺利，虽然部分国际化内容变成了繁体中文，是因为我没有指定语言的过，写了一个`en-US.yml`然后在`_config.yml`中指定语言为`en-US`。刷新，大功告成。
+<!-- indicate-the-source -->

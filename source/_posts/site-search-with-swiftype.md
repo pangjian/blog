@@ -49,3 +49,4 @@ photos:
 意思就是，如果文章中有photos（就是展示在文章头部的fancybox），就在html中添加meta标签，于fancybox使用一样的图片，如果fancybox有多个图片，那么就是用第一张。这样在使用`hexo d`生成博客的时候，就会自动在每一个包含fancybox的文章页面上加入这个`meta`标签，Swiftype就会为这片文章的搜索结果显示缩略图。
 
 就这样，你的站内搜索就已经完成。如果有其他更好的玩法，欢迎留言讨论。
+<!-- indicate-the-source -->

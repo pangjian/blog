@@ -5,3 +5,5 @@ tags: [生活]
 博客开张啦，这是我的第一篇博客，基于Hexo搭建，部署在Github Page上。
 
 地址：[pangjian.info](http://pangjian.info)
+
+<!-- indicate-the-source -->

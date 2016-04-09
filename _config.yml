@@ -89,6 +89,7 @@ plugins:
 - hexo-generator-seo-friendly-sitemap
 - hexo-generator-baidu-sitemap
 - hexo-tag-video
+- hexo-filter-indicate-the-source
 
 
 # Deployment
@@ -100,7 +101,17 @@ deploy:
 - type: git
   repo: git@git.coding.net:pangjian/pangjian.git
   branch: gitcafe-pages
-
+# indicate-the-source
+indicate_the_source:
+  pattern: indicate-the-source
+  enable: true
+  render_engine: ejs
+  element_class: source
+  domain_white_list:
+    - pangjian.info
+    - www.pangjian.info
+    - localhost
+  template: "<blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote>"
 # Hexo Beautify
 beautify:
   types:

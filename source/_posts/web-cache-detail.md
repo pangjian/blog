@@ -51,3 +51,4 @@ Cache-Control与Expires可以在服务端配置同时启用或者启用任意一
 
 本文参考数篇技术博客、百度百科、维基百科、Apache官方说明以及自己的理解完成，如有不正确的地方欢迎斧正。
 EOF
+<!-- indicate-the-source -->

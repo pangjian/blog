@@ -83,3 +83,4 @@ $("a").click(function(e){
 # 附录
 这个博客的转场动画使用的[NProgress](http://ricostacruz.com/nprogress/)。类似Youtube上的红色激光。使用起来也很加单。我自己玩了很久...
 ![NProgress](http://7vzqg8.com1.z0.glb.clouddn.com/using-pjax/NProgress.png)
+<!-- indicate-the-source -->
