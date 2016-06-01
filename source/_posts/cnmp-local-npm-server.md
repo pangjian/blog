@@ -14,7 +14,7 @@ photos:
 <!--more-->
 
 # 安装MySQL
-`cnpmjs.org`依赖一个数据库，官方支持`sqllite3`、`MySQL`、'MariaDB'、'PostgreSQL'中的任何一个，我选择了'MySQL'。
+`cnpmjs.org`依赖一个数据库，官方支持`sqllite3`、`MySQL`、`MariaDB`、`PostgreSQL`中的任何一个，我选择了`MySQL`。
 我们的操作系统是Red Hat 6.4，在这个动作之前应当将Red Hat自带的yum替换成CentOS的，此步骤不再赘述。
 编辑源列表：
 ```shell
@@ -98,10 +98,10 @@ database: {
 同步模式，由于硬盘资源有限，我选择了exist只同步已经存在的模块
 ```
 // sync mode select
-  // none: do not sync any module, proxy all public modules from sourceNpmRegistry
-  // exist: only sync exist modules
-  // all: sync all modules
-  syncModel: 'exist', // 'none', 'all', 'exist'
+// none: do not sync any module, proxy all public modules from sourceNpmRegistry
+// exist: only sync exist modules
+// all: sync all modules
+syncModel: 'exist', // 'none', 'all', 'exist'
 ```
 其他自定义配置，比如管理员、说明文档等等都可以自行修改。
 
