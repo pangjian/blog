@@ -3,6 +3,8 @@ date: 2016-01-13 13:43:13
 tags: [java,jackson]
 photos:
 - http://7vzqg8.com1.z0.glb.clouddn.com/a-strange-bug/BUG.png
+
+thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/a-strange-bug/BUG.png
 ---
 
 这是一个在测试环境发现的一个BUG，感觉很有趣，便写出来分享一下。本文的灵感以及标题都来自于《我遇到一个BUG，每逢周三就崩溃》。

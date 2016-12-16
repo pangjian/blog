@@ -1,0 +1,142 @@
+# ---------------------------------------------------------------
+# Site Information Settings
+# ---------------------------------------------------------------
+
+# Head info
+head:
+    favicon: "favicon.png"
+    high_res_favicon: "/img/favicon.png"
+    apple_touch_icon: "favicon.png"
+    keywords:
+
+# Jump Links Settings
+url:
+    rss: "/atom.xml"
+    daily_pic: "#"
+    logo: "/"
+
+
+# ---------------------------------------------------------------
+# Style Settings
+# ---------------------------------------------------------------
+
+# Schemes
+#scheme: Nexus
+scheme: Paradox
+#scheme: Isolation
+
+# UI & UX: slogan, color, effect
+uiux:
+    slogan: "简约 是复杂的最终形式"
+    theme_color: "#0097A7"
+    theme_sub_color: "#00838F"
+    hyperlink_color: "#00838F"
+    button_color: "#757575"
+    android_chrome_color: "#0097A7"
+    nprogress_color: "#FF4081"
+    nprogress_buffer: "800"
+
+# JS Effect Switches
+js_effect:
+    fade: true
+    smoothscroll: true
+
+# Reading experience
+# markdown available value:
+#     Material | Github | Plain
+reading:
+    markdown: Github
+    #entry_excerpt: 80
+    code_highlight: solarized-white
+
+# Thumbnail Settings
+thumbnail:
+    purecolor:
+    random_amount: 5
+
+# Background Settings
+# bing available parameter:
+#     new | color= | type=
+#         color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
+#         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
+background:
+    #purecolor: "#F5F5F5"
+    bgimg: "/img/bg.png"
+    bing:
+        enable: false
+        parameter:
+
+# Images Settings
+img:
+    logo: "/img/logo.png"
+    avatar: "/img/myavatar.jpg"
+    daily_pic: "/img/daily_pic.png"
+    sidebar_header: "/img/sidebar_header.png"
+    footerico: "/img/footer/footer_ico-"
+    #upyun_logo: "/img/upyun_logo.png"
+    random_thumbnail: "/img/random/"
+
+# Custom Fonts
+fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
+
+# ---------------------------------------------------------------
+# Menu Settings
+# ---------------------------------------------------------------
+
+# SNS Menu
+sns:
+    email: pangjian1010@gmail.com
+    twitter:
+    facebook:
+    googleplus: "https://www.google.com/"
+    weibo: "http://weibo.com/siriuspj"
+    instagram:
+    tumblr:
+    github: "https://github.com/pangjian"
+
+# Sidebar User Dropdown
+dropdown:
+    Email Me:
+        link: "mailto:pangjian1010@gamil.com"
+        icon: email
+
+# Pages Menu
+pages:
+    关于我: "/About"
+    标签云: "/tags"
+
+
+
+# ---------------------------------------------------------------
+# Integrated Services
+# ---------------------------------------------------------------
+
+# Comment Systems
+# Available value:
+#     duoshuo | disqus
+comment:
+    use: duoshuo
+    shortname: IO10
+    duoshuo_thread_key: path
+    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
+
+# Search Systems
+# Available value:
+#     swiftype | google | local
+search:
+    use: swiftype
+    swiftype_key: -dFQ3V3gswysE7f5VTM_
+
+# Leancloud Views
+leancloud:
+    enable: true
+    app_id: BvJcby3BNlDWQWq9qjji2NEK-gzGzoHsz
+    app_key: 3IcnGJ5Ad8PCCzUe2vLuDIaz
+    av_core_mini: "https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"
+
+# Busuanzi 不蒜子 Views
+busuanzi:
+    enable: false
+    all_site_uv: false
+    post_pv: false
+    busuanzi_pure_mini_js: "https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"

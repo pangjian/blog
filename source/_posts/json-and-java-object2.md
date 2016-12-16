@@ -3,6 +3,7 @@ date: 2015-10-30 08:19:33
 tags: [json,java,jackson]
 photos:
 - http://7vzqg8.com1.z0.glb.clouddn.com/json-and-java-object/JSON.png
+thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/json-and-java-object/JSON.png
 ---
 
 # 不符合驼峰规范的变量

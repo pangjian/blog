@@ -5,6 +5,7 @@ tags:
   - pjax
 photos:
   - 'http://7vzqg8.com1.z0.glb.clouddn.com/pjax-your-blog/pjax.png'
+thumbnail: 'http://7vzqg8.com1.z0.glb.clouddn.com/pjax-your-blog/pjax.png'
 categories: []
 date: 2015-12-03 12:32:00
 ---

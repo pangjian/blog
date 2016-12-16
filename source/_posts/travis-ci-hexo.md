@@ -4,6 +4,7 @@ tags:
   - travis-ci
 photos:
   - 'http://7vzqg8.com1.z0.glb.clouddn.com/travis-ci-hexo/travis-ci.png'
+thumbnail: 'http://7vzqg8.com1.z0.glb.clouddn.com/travis-ci-hexo/travis-ci.png'
 categories: []
 date: 2016-05-25 15:37:00
 ---

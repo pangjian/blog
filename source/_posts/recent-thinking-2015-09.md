@@ -3,6 +3,7 @@ date: 2015-09-15 14:59:45
 tags: [近期想法,notion]
 photos:
 - http://7vzqg8.com1.z0.glb.clouddn.com/recent-thinking/thinking.png
+thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/recent-thinking/thinking.png
 ---
 
 打算新开一类主题，主要用来记录近期的一些想法，有想好了要做的事情，也有要做但是还没有思路的事情。类似LifeHacker那样，不仅仅有编程相关。可以有技术、科技、设计、生活想法等等，如果时机成熟，这一个个的点子实践以后会形成一片单独的文章，如果我一直没有想法，看到这篇文章的人也可以在评论里帮我出出主意。这篇文字是第一次尝试。
