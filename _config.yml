@@ -114,6 +114,12 @@ indicate_the_source:
     - localhost
     - 127.0.0.1
   template: "<blockquote class='source'><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote>"
+
+#hexo-generator-search
+search:
+  path: search.xml
+  field: post
+
 # Hexo Beautify
 beautify:
   types:
