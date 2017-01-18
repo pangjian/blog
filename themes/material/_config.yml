@@ -52,7 +52,7 @@ reading:
 # Thumbnail Settings
 thumbnail:
     purecolor:
-    random_amount: 5
+    random_amount: 19
 
 # Background Settings
 # bing available parameter:
@@ -74,7 +74,7 @@ img:
     sidebar_header: "/img/sidebar_header.png"
     footerico: "/img/footer/footer_ico-"
     #upyun_logo: "/img/upyun_logo.png"
-    random_thumbnail: "/img/random/"
+    random_thumbnail: "/img/random/material-"
 
 # Custom Fonts
 fonts: Roboto, "Helvetica Neue", Helvetica, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Arial, sans-serif
@@ -93,6 +93,20 @@ sns:
     instagram:
     tumblr:
     github: "https://github.com/pangjian"
+    linkedin: "https://www.linkedin.com/in/健-庞-44777310b"
+    zhihu:
+    bilibili:
+    telegram:
+
+# SNS Share Switch
+sns_share:
+    twitter: true
+    facebook: true
+    googleplus: true
+    weibo: true
+    linkedin: true
+    qq: true
+    telegram: false
 
 # Sidebar User Dropdown
 dropdown:
@@ -100,12 +114,21 @@ dropdown:
         link: "mailto:pangjian1010@gamil.com"
         icon: email
 
+# Sidebar Categories Switch
+sidebar_categories: false
+
 # Pages Menu
 pages:
-    关于我: "/About"
-    标签云: "/tags"
+    关于我:
+      link: "/About"
+      icon: person
+    标签云:
+      link: "/tags"
+      icon: 
 
 
+# Qrcode for redirect at other device
+qrcode: true
 
 # ---------------------------------------------------------------
 # Integrated Services
@@ -117,7 +140,7 @@ pages:
 comment:
     use: duoshuo
     shortname: IO10
-    duoshuo_thread_key: path
+    duoshuo_thread_key_type: path
     duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
 
 # Search Systems
