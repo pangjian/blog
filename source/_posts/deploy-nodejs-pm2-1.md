@@ -22,6 +22,7 @@ thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2.png
 - npm 3.3.6
 
 全局安装`pm2`
+
 ```bash
 $ npm install pm2 -g
 ```
@@ -99,7 +100,8 @@ $ pm2 monit
 ```
 
 停止、重启等命令
-```
+
+```bash
 $ pm2 stop [app-name|id]  #停止某一个进程，可以使用app-name或者id
 $ pm2 stop all            #停止所有进程
 

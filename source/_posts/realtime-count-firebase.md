@@ -12,7 +12,7 @@ thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/firebas
 <!--more-->
 
 ## 注册Firebase账号
-在[Firebase官网](www.firebase.com)注册一个新用户
+在[Firebase官网](http://www.firebase.com)注册一个新用户
 ![Sign Up](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/signup.PNG)
 
 ## 创建应用

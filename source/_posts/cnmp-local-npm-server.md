@@ -22,7 +22,7 @@ thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/cnpm-local-npm-server/cnpmtitle
 $ vim /etc/yum.repos.d/rhel-debuginfo.repo
 ```
 添加如下内容：
-```
+```coffeescript
 [mysql56]
 name=MySQL 5.6
 baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/6/$basearch/

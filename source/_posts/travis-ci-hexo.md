@@ -38,7 +38,8 @@ travis login --auto
 ```
 travis encrypt-file ssh_key --add
 ```
-##指定SSH设置
+
+## 指定SSH设置
 在根目录下新建文件`ssh_config`,内容见我的设置,我同时设置了两个page服务。
 ```
 Host github.com
@@ -53,16 +54,20 @@ Host git.coding.net
   IdentityFile ~/.ssh/id_rsa
   IdentitiesOnly yes
 ```
+
 ## travis CI解密配置
+
 这部分内容需要配置在`.travis.yml`里,注意修改秘钥
-```
+
+```shell
 - openssl aes-256-cbc -K $encrypted_26b4962af0e7_key -iv $encrypted_26b4962af0e7_iv
   -in id_rsa.enc -out ~/.ssh/id_rsa -d
 ```
 
-
 # 我的`.travis.yml`配置
+
 上面的描述如果有不明白的地方直接查看我这份完整版的配置文件，拿去修改就可以直接使用。
+
 ```
 language: node_js
 
@@ -90,5 +95,6 @@ script:
 - hexo deploy
 
 ```
+
 EOF
 <!-- indicate-the-source -->
