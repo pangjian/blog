@@ -125,7 +125,7 @@ pages:
       icon: person
     标签云:
       link: "/tags"
-      icon: cloud circle
+      icon: "cloud circle"
     友情链接:
       link: "/links"
       icon: link
