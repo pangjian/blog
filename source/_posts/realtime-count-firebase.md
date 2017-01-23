@@ -2,8 +2,8 @@ title: 基于Firebase的Hexo博客实时访问数统计
 date: 2015-02-27 15:12:06
 tags: [技术,firebase,hexo]
 photos:
-- http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/firebase.PNG
-thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/firebase.PNG
+- ./resources/realtime-count-firebase/firebase.PNG
+thumbnail: ./resources/realtime-count-firebase/firebase.PNG
 ---
 
 本来想写一个HEXO的搭建过程的，但是在搜索引擎上一搜一大把教程。看到有人评论：“你写这个跟HEXO官方的教程比好在哪？”仔细想想，说的极好。索性也就不写这个人家已经写烂了的东西了。附一个[官方教程链接](http://hexo.io/docs/)。其实在搭建过程中还参考了一个很全面很详细的博客，也附上链接吧，[ibruce不如](http://ibruce.info/2013/11/22/hexo-your-blog/)。
@@ -13,11 +13,11 @@ thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/firebas
 
 ## 注册Firebase账号
 在[Firebase官网](http://www.firebase.com)注册一个新用户
-![Sign Up](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/signup.PNG)
+![Sign Up](./resources/realtime-count-firebase/signup.PNG)
 
 ## 创建应用
 注册成功以后就可以创建一个应用了
-![create app](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/createApp.PNG)
+![create app](./resources/realtime-count-firebase/createApp.PNG)
 
 ## Firebase基本用法
 Firebase使用JSON存储数据，但是Firebase不支持Arrays数组，它会将数组转换成一个Object对象来存储，就像这样。
@@ -116,7 +116,7 @@ io10blogFirebase.child("detail/"+current_url).transaction(function (current_coun
 ```
 下面这幅图是Firebase的应用管理界面，这个界面的数也是实时在变化的。
 
-![DashBoard](http://7vzqg8.com1.z0.glb.clouddn.com/realtime-count-firebase/FirebaseDash.PNG)
+![DashBoard](./resources/realtime-count-firebase/FirebaseDash.PNG)
 
 这样，实时访问统计就可以实现啦！这里只是打开了一个思路，Firebase等于给静态网站添加上了可以实时存储于读取数据的翅膀。除了统计访问量，它能做的事情很多很多。甚至替换掉多说，自己实现一个评论系统都是有可能的！
 <!-- indicate-the-source -->

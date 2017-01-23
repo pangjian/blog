@@ -2,8 +2,8 @@ title: nodejs部署方式-pm2(一)
 date: 2016-12-02 13:02:10
 tags: [Nodejs,pm2]
 photos:
-- http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2.png
-thumbnail: http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2.png
+- ./resources/deploy-nodejs-pm2-1/pm2.png
+thumbnail: ./resources/deploy-nodejs-pm2-1/pm2.png
 ---
 
 目前Nodejs开发中有很多痛点，其中有一个是修改完代码以后需要我们重启服务才能看到效果。这样一次次的杀进程、重启，杀进程、重启很让人头大。程序员是最痛恨重复工作的物种，之前有了解过的同学可能知道`forever`。`forever`可以帮我们解决上面的问题，通过对资源变化的检测做到变化后自动重启。开发阶段我们使用`node file.js`来启动另外由于Nodejs的单线程，任何异常都会导致整个服务中断，这对于生产上长时间提供服务的程序来讲是不可以的，`forever`可以帮我们在异常后重启，保证服务一直在线，我想这也就是它名字的由来吧。但我想说的是`forever`不够“高！大！上！”。接下来我要介绍一个足够高大上的神器--[`pm2`](http://pm2.keymetrics.io)。
@@ -77,7 +77,7 @@ $ pm2 update
 $ npm run pm2
 ```
 看到下面的界面，就启动成功了，然后我们就可以关掉这个窗口了，服务不会因此停止，是不是高大上多了。
-![pm2启动界面](http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2-start.png)
+![pm2启动界面](./resources/deploy-nodejs-pm2-1/pm2-start.png)
 
 # 管理和监控
 启动成功的界面会展示App name和id，这两个值很重要。当然这两个值都可以在processes.json配置文件进行配置。
@@ -92,7 +92,7 @@ $ pm2 list
 $ pm2 show Wolverine 或者
 $ pm2 show 0
 ```
-![pm2 list](http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2-list.png)
+![pm2 list](./resources/deploy-nodejs-pm2-1/pm2-list.png)
 内容涉及重启次数、运行时间、脚本路径、参数、日志路径、运行模式等等信息
 输入
 ```
@@ -112,7 +112,7 @@ $ pm2 delete all          #删除并停止所有进程
 ```
 
 可以进一步查看每一个服务的cpu、内存动态占用情况。
-![pm2 monit](http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2-monit.png)
+![pm2 monit](./resources/deploy-nodejs-pm2-1/pm2-monit.png)
 
 # 日志监控
 如果你一直使用`tail -f log_file.log log_error.log`来查看日志，你可能会爱上下面的这个功能。
@@ -133,9 +133,9 @@ $ pm2 logs --json
 $ pm2 web
 ```
 pm2会启动一个叫做pm2-http-interface的进程提供web服务。你打开浏览器输入http：//127.0.0.1:9615，是不是被看到的结果惊艳到了。
-![pm2-webapi](http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2-webapi.png)
+![pm2-webapi](./resources/deploy-nodejs-pm2-1/pm2-webapi.png)
 pm2提供的web api通过json输出了很多信息。大致结构可以看截图：
-![pm2-webapi-json](http://7vzqg8.com1.z0.glb.clouddn.com/deploy-nodejs-pm2-1/pm2-webapi-json.png)
+![pm2-webapi-json](./resources/deploy-nodejs-pm2-1/pm2-webapi-json.png)
 
 拿出你的想象力，我们可以开发一个应用来调用此api，就可以开发出一个图形界面的监控软件了。。。
 

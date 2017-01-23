@@ -4,8 +4,8 @@ tags:
   - nprogress
   - pjax
 photos:
-  - 'http://7vzqg8.com1.z0.glb.clouddn.com/pjax-your-blog/pjax.png'
-thumbnail: 'http://7vzqg8.com1.z0.glb.clouddn.com/pjax-your-blog/pjax.png'
+  - './resources/pjax-your-blog/pjax.png'
+thumbnail: './resources/pjax-your-blog/pjax.png'
 categories: []
 date: 2015-12-03 12:32:00
 ---
@@ -19,10 +19,10 @@ Ajax（Asynchronous Javascript and XML）的魅力在于它的每一个成员都
 
 # 效果
 不看广告，先看疗效。引入pjax前切换一次页面的请求
-![引入pjax前](http://7vzqg8.com1.z0.glb.clouddn.com/using-pjax/pajax_before.png)
+![引入pjax前](./resources/using-pjax/pajax_before.png)
 
 引入pjax后...
-![引入pjax后](http://7vzqg8.com1.z0.glb.clouddn.com/using-pjax/pjax_after.png)
+![引入pjax后](./resources/using-pjax/pjax_after.png)
 效果还是很明显的，请求减少到了3次，大量已经引入的资源文件由于没有刷新，没有重复请求。速度也大大提升了。
 
 # 安装
@@ -83,5 +83,5 @@ $("a").click(function(e){
 ```
 # 附录
 这个博客的转场动画使用的[NProgress](http://ricostacruz.com/nprogress/)。类似Youtube上的红色激光。使用起来也很加单。我自己玩了很久...
-![NProgress](http://7vzqg8.com1.z0.glb.clouddn.com/using-pjax/NProgress.png)
+![NProgress](./resources/using-pjax/NProgress.png)
 <!-- indicate-the-source -->
