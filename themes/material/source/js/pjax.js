@@ -11,6 +11,8 @@ console.log("pjax is on...")
    callback: function(){}
  })*/
 if ($.support.pjax) {
+ $(document).pjax('a', '#pjax', { fragment: ('#pjax'), timeout: 10000 });
+ $(document).on({
    'pjax:click': function() {
      //NProgress.start();
      beforePjax();
@@ -24,10 +26,12 @@ if ($.support.pjax) {
      console.log("pjax end...");
      afterPjax();
    }
+ });
  function beforePjax(){
  }
  function afterPjax(){
    //多说展示
+   //pajx_loadDuodsuo();
    //访问量数据增加
 
  }

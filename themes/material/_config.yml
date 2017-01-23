@@ -40,6 +40,7 @@ uiux:
 js_effect:
     fade: true
     smoothscroll: true
+    pjax: false
 
 # Reading experience
 # markdown available value:
@@ -47,7 +48,7 @@ js_effect:
 reading:
     markdown: Github
     #entry_excerpt: 80
-    code_highlight: solarized-white
+    code_highlight: atom-one-dark
 
 # Thumbnail Settings
 thumbnail:
@@ -124,7 +125,10 @@ pages:
       icon: person
     标签云:
       link: "/tags"
-      icon: 
+      icon: cloud circle
+    友情链接:
+      link: "/links"
+      icon: link
 
 
 # Qrcode for redirect at other device
