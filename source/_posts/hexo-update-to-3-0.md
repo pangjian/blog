@@ -2,9 +2,9 @@ title: 升级Hexo2.X到3.0
 date: 2015-04-11 21:47:32
 tags: [hexo]
 photos:
-- ./resources/hexo-update-to-3-0/hexo3a.png
-- ./resources/hexo-update-to-3-0/hexo3b.png
-thumbnail: ./resources/hexo-update-to-3-0/hexo3a.png
+- /resources/hexo-update-to-3-0/hexo3a.png
+- /resources/hexo-update-to-3-0/hexo3b.png
+thumbnail: /resources/hexo-update-to-3-0/hexo3a.png
 ---
 我一般不想转或者写别人写过的一些东西，但是今天这篇文章算是转的，完全记录了我升级hexo的过程。为什么呢？实在是觊觎了很久了，一直没敢动手，3.0版本可是个大手术，据说好多主题和插件都挂了，现在这个主题我修改了不少，怕万一出个什么问题很麻烦。仅以此文来记录这次没什么意外地升级。
 
@@ -87,7 +87,7 @@ hexo server
 ```
 
 浏览器打开`127.0.0.1:4000`看看效果
-![pangjian.info](./resources/hexo-update-to-3-0/pangjian.info.png)
+![pangjian.info](/resources/hexo-update-to-3-0/pangjian.info.png)
 
 还算是顺利，虽然部分国际化内容变成了繁体中文，是因为我没有指定语言的过，写了一个`en-US.yml`然后在`_config.yml`中指定语言为`en-US`。刷新，大功告成。
 <!-- indicate-the-source -->

@@ -2,8 +2,8 @@ title: JSON与Java对象的事
 date: 2015-09-12 13:11:33
 tags: [json,java,jackson]
 photos:
-- ./resources/json-and-java-object/JSON.png
-thumbnail: ./resources/json-and-java-object/JSON.png
+- /resources/json-and-java-object/JSON.png
+thumbnail: /resources/json-and-java-object/JSON.png
 ---
 
 很久没有写了，来清理一下杂草。这片文字是团队内其他小伙伴经常混淆的一个知识点，最初的目的是写个东西好让大家用到的时候可查，由于原文涉及公司的一个框架，不便写出来。该框架其实引用的开源框架Jackson，所以本文直接介绍Jackson部分。其实说不上介绍，约等于一个学习笔记。
@@ -15,14 +15,14 @@ JSON（JavaScript Object Notation）是一种轻量级的数据交换格式。�
 
 ### JSON的值可以是
 * 数字number（整数获浮点数）
-![number](./resources/json-and-java-object/number.PNG)
+![number](/resources/json-and-java-object/number.PNG)
 * 字符串string（在双引号获单引号中）
-![string](./resources/json-and-java-object/string.PNG)
+![string](/resources/json-and-java-object/string.PNG)
 * 逻辑值boolean（true获false）
 * 数组array（在方括号中）
-![array](./resources/json-and-java-object/array.PNG)
+![array](/resources/json-and-java-object/array.PNG)
 * 对象object（在花括号中）
-![object](./resources/json-and-java-object/object.PNG)
+![object](/resources/json-and-java-object/object.PNG)
 * 函数function
 * null
 

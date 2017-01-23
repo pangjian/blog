@@ -2,8 +2,8 @@ title: 浏览器缓存知识归纳
 date: 2016-03-05 13:53:54
 tags: [cache]
 photos:
-- ./resources/web-cache-detail/web-cache.png
-thumbnail: ./resources/web-cache-detail/web-cache.png
+- /resources/web-cache-detail/web-cache.png
+thumbnail: /resources/web-cache-detail/web-cache.png
 ---
 写在开头：这篇文章是打算分享到单位内部的材料。归纳浏览器缓存也是对一个生产问题的分析总结出来的。这片文章经过脱敏以后发表到个人博客上面吧。
 
@@ -18,7 +18,7 @@ thumbnail: ./resources/web-cache-detail/web-cache.png
 3. 如果未命中协商缓存，则服务器会将完整的资源返回给浏览器，浏览器加载新资源，并更新缓存。
 # 强缓存
 命中强缓存时，浏览器并不会将请求发送给服务器。在Chrome的开发者工具中看到http的返回码是200，但是在Size列会显示为(from cache)。
-![强缓存](./resources/web-cache-detail/cache1.png)
+![强缓存](/resources/web-cache-detail/cache1.png)
 强缓存是利用http的返回头中的Expires或者Cache-Control两个字段来控制的，用来表示资源的缓存时间。
 ## Expires
 该字段会返回一个时间，比如Expires:Thu,31 Dec 2037 23:59:59 GMT。这个时间代表着这个资源的失效时间，也就是说在2037年12月31日23点59分59秒之前都是有效的，即命中缓存。这种方式有一个明显的缺点，由于失效时间是一个绝对时间，所以当客户端本地时间被修改以后，服务器与客户端时间偏差变大以后，就会导致缓存混乱。于是发展出了Cache-Control。
@@ -30,14 +30,14 @@ Cache-Control与Expires可以在服务端配置同时启用或者启用任意一
 若未命中强缓存，则浏览器会将请求发送至服务器。服务器根据http头信息中的Last-Modify/If-Modify-Since或Etag/If-None-Match来判断是否命中协商缓存。如果命中，则http返回码为304，浏览器从缓存中加载资源。
 ## Last-Modify/If-Modify-Since
 浏览器第一次请求一个资源的时候，服务器返回的header中会加上Last-Modify，Last-modify是一个时间标识该资源的最后修改时间，例如Last-Modify: Thu,31 Dec 2037 23:59:59 GMT。
-![Last-Modify](./resources/web-cache-detail/last-modify.png)
+![Last-Modify](/resources/web-cache-detail/last-modify.png)
 当浏览器再次请求该资源时，上送的请求头中会包含If-Modify-Since，该值为缓存之前返回的Last-Modify。服务器收到If-Modify-Since后，根据资源的最后修改时间判断是否命中缓存。
-![If-Modify-Since](./resources/web-cache-detail/if-modify-since.png)
+![If-Modify-Since](/resources/web-cache-detail/if-modify-since.png)
 如果命中缓存，则返回http304，并且不会返回资源内容，并且不会返回Last-Modify。由于对比的服务端时间，所以客户端与服务端时间差距不会导致问题。但是有时候通过最后修改时间来判断资源是否修改还是不太准确（资源变化了最后修改时间也可以一致）。于是出现了ETag/If-None-Match。
 
 ## ETag/If-None-Match
 与Last-Modify/If-Modify-Since不同的是，Etag/If-None-Match返回的是一个校验码（ETag: entity tag）。ETag可以保证每一个资源是唯一的，资源变化都会导致ETag变化*。服务器根据浏览器上送的If-None-Match值来判断是否命中缓存。
-![ETag](./resources/web-cache-detail/etag.png)
+![ETag](/resources/web-cache-detail/etag.png)
 ## * ETag扩展说明
 我们对ETag寄予厚望，希望它对于每一个url生成唯一的值，资源变化时ETag也发生变化。神秘的Etag是如何生成的呢？以Apache为例，ETag生成靠以下几种因子
 1. 文件的i-node编号，此i-node非彼iNode。是Linux/Unix用来识别文件的编号。是的，识别文件用的不是文件名。使用命令’ls –I’可以看到。

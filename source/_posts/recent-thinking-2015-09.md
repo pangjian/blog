@@ -2,8 +2,8 @@ title: 近期想法汇总2015年9月
 date: 2015-09-15 14:59:45
 tags: [近期想法,notion]
 photos:
-- ./resources/recent-thinking/thinking.png
-thumbnail: ./resources/recent-thinking/thinking.png
+- /resources/recent-thinking/thinking.png
+thumbnail: /resources/recent-thinking/thinking.png
 ---
 
 打算新开一类主题，主要用来记录近期的一些想法，有想好了要做的事情，也有要做但是还没有思路的事情。类似LifeHacker那样，不仅仅有编程相关。可以有技术、科技、设计、生活想法等等，如果时机成熟，这一个个的点子实践以后会形成一片单独的文章，如果我一直没有想法，看到这篇文章的人也可以在评论里帮我出出主意。这篇文字是第一次尝试。
@@ -19,7 +19,7 @@ thumbnail: ./resources/recent-thinking/thinking.png
 ## 如何简单制作一个延时摄影作品
 这个月初，请了几天假带着老婆去巴厘岛疯了一圈。鉴于我手机的摄像头坏了，于是带了小蚁运动相机。使用延时摄影功能，拍摄了号称“全球最美十大日落之一”的金巴兰海滩日落。印象中可以用Premiere将多张照片拼接成视频。
 这里先贴一张
-![金巴兰海滩日落](./resources/recent-thinking/Jimbaran.png)
+![金巴兰海滩日落](/resources/recent-thinking/Jimbaran.png)
 ## 基于NodeJS的前后端分离实践
 
 

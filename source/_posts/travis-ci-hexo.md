@@ -3,8 +3,8 @@ tags:
   - hexo
   - travis-ci
 photos:
-  - './resources/travis-ci-hexo/travis-ci.png'
-thumbnail: './resources/travis-ci-hexo/travis-ci.png'
+  - '/resources/travis-ci-hexo/travis-ci.png'
+thumbnail: '/resources/travis-ci-hexo/travis-ci.png'
 categories: []
 date: 2016-05-25 15:37:00
 ---
