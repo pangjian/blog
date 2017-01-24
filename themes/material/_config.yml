@@ -145,7 +145,7 @@ comment:
     use: duoshuo
     shortname: IO10
     duoshuo_thread_key_type: path
-    duoshuo_embed_js_url: "https://static.duoshuo.com/embed.js"
+    duoshuo_embed_js_url: "/js/embed.js"
 
 # Search Systems
 # Available value:
