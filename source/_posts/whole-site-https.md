@@ -111,5 +111,11 @@ location / {
 全站HTTPS改造完毕，看见这个绿色的小锁，心情真好！
 ![https](/resources/whole-site-https/httpsdone.png)
 
+## 安全测试
+
+![安全测试报告](/resources/whole-site-https/sslreport.png)
+
+[查看完整的测试结果>>](https://www.ssllabs.com/ssltest/analyze.html?d=www.pangjian.me)
+
 EOF
 <!-- indicate-the-source -->
