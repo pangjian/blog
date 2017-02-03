@@ -2,7 +2,8 @@ title: 不用cookie我也能追踪你！
 date: 2015-03-09 09:30:10
 tags: [技术,cookie,html5,canvas,javascript]
 photos:
-- http://7vzqg8.com1.z0.glb.clouddn.com/track-u-without-cookie/cookie.png
+- /resources/track-u-without-cookie/cookie.png
+thumbnail: /resources/track-u-without-cookie/cookie.png
 ---
 
 抱歉起了这么个“吸引人的”标题，但我不是标题党。最近由于工作上的一些事情，涉及到识别、追踪设备的项目来了几个，从一篇论文《The Web Never Forgets》无意间又发现了这个技术。查阅了一些资料。做了个小Demo应用到了本博客上。对！你没听错，本页面在追踪你。不过也没那么可怕。看看本站的Visitor Info模块，它可能在屏幕右侧也可能在最底下。这个模块会知道你是否之前访问过本站，并且结合了上一篇博文[基于Firebase的Hexo博客实时访问数统计](http://pangjian.info/2015/02/27/realtime-count-firebase/)中提到的访问数统计，做到了记录每一位访问者的访问次数。即使你关闭了cookie。^ _ ^
@@ -52,7 +53,7 @@ photos:
 当然你查看本页的源代码可以看到一个文件-`canvasFringerprint.js`。那是完整代码。
 我提取出这个指纹以后，在Firebase上为每一个指纹设置了一个计数器，这样就实现了为每一位访问者记录访问次数。
 效果如下：
-![visitor counter](http://7vzqg8.com1.z0.glb.clouddn.com/track-u-without-cookie/visitor_counter.png)
+![visitor counter](/resources/track-u-without-cookie/visitor_counter.png)
 你可以试试开启浏览器的隐身模式，或者删除全部cookie。再刷新一下这个页面，看看是不是他还记得你？
 
 ## 链接

@@ -2,7 +2,8 @@ title: Jackson中的那些坑
 date: 2015-10-30 08:19:33
 tags: [json,java,jackson]
 photos:
-- http://7vzqg8.com1.z0.glb.clouddn.com/json-and-java-object/JSON.png
+- /resources/json-and-java-object/JSON.png
+thumbnail: /resources/json-and-java-object/JSON.png
 ---
 
 # 不符合驼峰规范的变量
@@ -22,7 +23,7 @@ public class Entity {
 ```
 转化的JSON为:
 ```json
-{“beFlag”:null}
+{"beFlag":null}
 ```
 前段时间走查代码时发现一个问题，实体中有一个字段为ECash。驼峰规范中并没有详细说明这种单词只有一个字母的变量是否符合驼峰规范。当遇到这种变量时，转化的JSON发送了问题，我们的预期应该是这样的
 ```json

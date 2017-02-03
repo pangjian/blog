@@ -2,7 +2,8 @@ title: 使用CNPM搭建私有NPM仓库
 date: 2016-06-01 11:13:52
 tags: [Nodejs,cnpm]
 photos:
-- http://7vzqg8.com1.z0.glb.clouddn.com/cnpm-local-npm-server/cnpmtitle.png
+- /resources/cnpm-local-npm-server/cnpmtitle.png
+thumbnail: /resources/cnpm-local-npm-server/cnpmtitle.png
 ---
 我们在使用Nodejs的时候，使用npm仓库来发布和管理模块，我们可以从npm上下载别人发布的模块使用，也可以自己发布模块，有点类似于Maven，这是非常流行的开源社区模式。但是在企业内部，我们不希望我们的生产代码可以随意引用任何未经企业审核的代码；我们也不希望企业内部自己的模块发布给任意人员使用；还有一个重要的原因是很多企业内部无法连接互联网`cnpm`就是来解决这些问题的。官方的解释是`cnpm`=**Company npm**
 # 环境配置
@@ -21,7 +22,7 @@ photos:
 $ vim /etc/yum.repos.d/rhel-debuginfo.repo
 ```
 添加如下内容：
-```
+```coffeescript
 [mysql56]
 name=MySQL 5.6
 baseurl=http://repo.mysql.com/yum/mysql-5.6-community/el/6/$basearch/
@@ -115,7 +116,7 @@ $ npm run stop
 ```
 cnmp启动以后会占用7001和7002两个端口，在iptables中开放这两个端口。
 打开浏览器输入`http://ip:7002`，看到如下界面，安装成功。我替换了个Logo
-![cnpm](http://7vzqg8.com1.z0.glb.clouddn.com/cnpm-local-npm-server/cnpm.png)
+![cnpm](/resources/cnpm-local-npm-server/cnpm.png)
 
 # 如何使用私有仓库
 当我们使用私有的仓库时，模块就会从私有库中下载，如果私有库中没有，cnpm就会去npm仓库中下载，并保存在私有仓库一份。

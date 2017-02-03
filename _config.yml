@@ -3,16 +3,17 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: IO10
+title: IO10|PangJian's Blog
 subtitle: PangJian's Blog
-description: PangJian's Blog
+description: "简约 是复杂的最终形式"
 author: Pang Jian
 email: pangjian1010@gmail.com
-language: en-US
+#language
+language: zh-CN
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://www.pangjian.info
+url: http://www.pangjian.me
 root: /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
@@ -36,7 +37,7 @@ post_asset_folder: false
 relative_link: false
 highlight:
   enable: true
-  line_number: true
+  line_number: false
   tab_replace:
 
 # Category & Tag
@@ -79,8 +80,8 @@ disqus_shortname:
 # Extensions
 ## Plugins: https://github.com/hexojs/hexo/wiki/Plugins
 ## Themes: https://github.com/hexojs/hexo/wiki/Themes
-theme: landscape-plus
-#theme: hueman
+#theme: landscape-plus
+theme: material
 exclude_generator:
 
 plugins:
@@ -110,8 +111,17 @@ indicate_the_source:
   domain_white_list:
     - pangjian.info
     - www.pangjian.info
+    - pangjian.me
+    - www.pangjian.me
     - localhost
-  template: "<blockquote><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote>"
+    - 127.0.0.1
+  template: "<blockquote class='source'><p>转载请注明出处：<%- post.permalink %></p><p>访问原文「<a href='<%- post.permalink %>'><%- post.title %></a>」获取最佳阅读体验并参与讨论</p></blockquote>"
+
+#hexo-generator-search
+search:
+  path: search.xml
+  field: post
+
 # Hexo Beautify
 beautify:
   types:

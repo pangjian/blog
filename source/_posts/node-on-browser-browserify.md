@@ -2,7 +2,8 @@ title: javascript前后端代码复用-browserify
 date: 2015-11-18 09:36:11
 tags: [Nodejs,javascript,browserify]
 photos:
-- http://7vzqg8.com1.z0.glb.clouddn.com/node-on-browser-browserify/browserify.png
+- /resources/node-on-browser-browserify/browserify.png
+thumbnail: /resources/node-on-browser-browserify/browserify.png
 ---
 Nodejs将javascript带上了一个新的高度，让之运行于浏览器端的javascript可以运行在服务器端。但是Nodejs遵循Commonjs规范，不能直接运行在浏览器端。虽然是同一种语言，但是前后端有着自己的库，不能复用真是一种浪费。
 这时候一个神器出现了，[Browserify](http://browserify.org/)。通过预编译，可以将Commonjs规范的后端Nodejs代码直接可以运行在浏览器端。打通了端后端代码复用的壁垒，为nodejs程序开辟了一片新天地。
@@ -55,7 +56,7 @@ var outputname = require('./outputName.js');
 outputname('pangjian');
 ```
 在Nodejs环境下运行结果如下：
-![Nodejs环境下运行结果](http://7vzqg8.com1.z0.glb.clouddn.com/node-on-browser-browserify/nodeResult.png)
+![Nodejs环境下运行结果](/resources/node-on-browser-browserify/nodeResult.png)
 
 使用browserify预编译一下
 ```shell
@@ -66,7 +67,7 @@ $ browserify index.js > bundle.js
 <script src="bundle.js"></script>
 ```
 查看浏览器端运行结果：
-![浏览器端运行结果](http://7vzqg8.com1.z0.glb.clouddn.com/node-on-browser-browserify/browserResult.png)
+![浏览器端运行结果](/resources/node-on-browser-browserify/browserResult.png)
 
 当然，你肯定不能满足于将所有脚本全部打包成一个js文件，仅仅在`script`标签上引用进来。你需要的也许是将某个模块打包，然后在浏览器的js中使用`require(module)`来调用这个模块，这也正是我需要的。那么你需要在执行预编译的时候加上`-r`参数即可。
 
