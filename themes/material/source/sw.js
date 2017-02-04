@@ -1,6 +1,6 @@
 'use strict';
 
-const version = 'v20170204';
+const version = 'v20170203';
 const __DEVELOPMENT__ = false;
 const __DEBUG__ = false;
 const offlineResources = [
@@ -18,6 +18,7 @@ const ignoreFetch = [
   /https?:\/\/cdn1.lncld.net\//,
   /https?:\/\/api.leancloud.cn\//,
   /https?:\/\/io10.duoshuo.com\//,
+  /https?:\/\/www.pangjian.me\/verynginx/,
 ];
 
 
