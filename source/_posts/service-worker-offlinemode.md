@@ -11,6 +11,7 @@ PWA有以下几种特性：
 - App Shell
 - Offline（离线能力）
 - Re-engageable（推送通知能力）
+
 所有这些特性都是“优雅降级、渐进增强的”，给支持的设备更好的体验，不支持的设备也不会更差。这就和微信小程序这种二流设计的根本不同之处。
 <!--more-->
 
@@ -37,7 +38,13 @@ PWA有以下几种特性：
 这里需要注意的是，`sw.js`所在的目录要高于它的控制范围，也就是`scope`。我把`sw.js`放在了根目录来控制整个目录。
 
 接下来看看我们的最终效果吧，你也可以在自己的浏览器下断网尝试一下。当然有部分浏览器目前还不支持，比如大名鼎鼎的Safari。
+### 离线有缓存情况
+
 ![离线有缓存情况](/resources/service-worker-offlinemode/offline.png)
+
+### 离线无缓存情况
+会展示一个默认的页面
+
 ![离线无缓存情况](/resources/service-worker-offlinemode/offlinenocache.png)
 
 -EOF-
