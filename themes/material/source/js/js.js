@@ -2299,3 +2299,35 @@ $(document).ready(function() {
     });
 
 })();
+
+
+//Google Analystic proxy
+(function() {
+
+    'use strict';
+    var win = window;
+    var i, url = '//www.pangjian.me/view.gif';
+    var screen = win.screen, doc = win.document;
+
+    var param = {
+      p: 'pangjian-blog',
+      r: doc.referrer,
+      s: screen.width + 'x' + screen.height,
+      v: win.innerWidth + 'x' + win.innerHeight,
+      t: doc.title,
+      dpr: win.devicePixelRatio || win.webkitDevicePixelRatio || win.mozDevicePixelRatio || 1,
+      _: +new Date()
+    };
+
+    var query = [];
+    for (i in param) {
+      query.push(i + '=' + encodeURIComponent(param[i]));
+    }
+
+    setTimeout(function () {
+      var img = new Image();
+      img.src = url + '?' + query.join('&');
+      $('#monitor').append(img);
+    }, 10);
+
+})();
