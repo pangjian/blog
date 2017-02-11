@@ -28,7 +28,7 @@ openssl req -new -sha256 -key domain.key -subj "/" -reqexts SAN -config <(cat /e
 此过程非常重要，用来和Let's Encrypt验证域名的控制权。采用`acme-tiny`脚本
 先创建一个验证文件夹，比如`/home/pangjian/www/challenges`，然后配置一个HTTP服务
 
-```Nginx
+```config
 server {
     server_name www.pangjian.me pangjian.me;
 
@@ -71,18 +71,18 @@ service nginx reload
 ```
 
 执行`crontab -e`，输入以下内容
-```
+```config
 0 0 1 * * /home/pangjian/ssl/renew_cert.sh >/dev/null 2>&1
 ```
 
 # Nginx配置
 在Nginx配置中增加上证书信息
-```
+```config
 ssl_certificate     /home/pangjian/ssl/chained.pem;
 ssl_certificate_key /home/pangjian/ssl/domain.key;
 ```
 在http的服务中除了验证服务以外，其他请求都rewrite到https服务下，
-```
+```config
 location / {
         rewrite ^/(.*)$ https://www.pangjian.me/$1 permanent;
     }
@@ -93,7 +93,7 @@ location / {
 首先先下载多说的[`embed.js`](https://static.duoshuo.com/embed.js)，
 ## 修改头像链接
 搜索avatar_url，对url进行字符串替换
-```javascript
+```js
     avatarUrl: function(e) {
       var s = e.avatar_url || rt.data.default_avatar_url;
       s=s.replace(/http:/g,'https:');
@@ -101,7 +101,7 @@ location / {
     },
 ```
 ## 修改表情链接
-```javascript
+```js
   var t = ""
   , s = e.post
   , i = e.options

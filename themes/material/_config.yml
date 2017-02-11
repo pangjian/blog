@@ -46,7 +46,7 @@ js_effect:
 # markdown available value:
 #     Material | Github | Plain
 reading:
-    markdown: Github
+    #markdown: Github
     #entry_excerpt: 80
     code_highlight: atom-one-dark
 
