@@ -142,3 +142,28 @@ beautify:
     'indent_size': 2
     'indent_with_tabs': false
     # More Options (https://github.com/beautify-web/js-beautify/blob/master/README.md)
+
+html_minifier:
+  enable: false
+  exclude:
+
+css_minifier:
+  enable: true
+  exclude:
+    - '*.min.css'
+
+js_minifier:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude:
+    - '*.min.js'
+
+image_minifier:
+  enable: true
+  interlaced: false
+  multipass: false
+  optimizationLevel: 2
+  pngquant: false
+  progressive: false
