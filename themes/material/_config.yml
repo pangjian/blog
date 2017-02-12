@@ -46,7 +46,7 @@ js_effect:
 # markdown available value:
 #     Material | Github | Plain
 reading:
-    #markdown: Github
+    markdown: Github
     #entry_excerpt: 80
     code_highlight: atom-one-dark
 
@@ -61,8 +61,8 @@ thumbnail:
 #         color available value: black, blue, brown, green, multi, orange, pink, purple, red, white, yellow
 #         type available value: A (animal), C (culture), N (nature), S (space), T (travel)
 background:
-    #purecolor: "#F5F5F5"
-    bgimg: "/img/bg.png"
+    purecolor: "#F5F5F5"
+    #bgimg: "/img/bg.png"
     bing:
         enable: false
         parameter:

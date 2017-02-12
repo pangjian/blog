@@ -71,7 +71,7 @@ service nginx reload
 ```
 
 执行`crontab -e`，输入以下内容
-```config
+```bash
 0 0 1 * * /home/pangjian/ssl/renew_cert.sh >/dev/null 2>&1
 ```
 
