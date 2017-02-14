@@ -5,7 +5,6 @@
   "dependencies": {
     "hexo": "3.1.1",
     "hexo-admin": "^1.1.1",
-    "hexo-all-minifier": "^0.0.14",
     "hexo-beautify": "^1.0.2",
     "hexo-deployer-git": "0.1.0",
     "hexo-filter-indicate-the-source": "^1.0.2",
