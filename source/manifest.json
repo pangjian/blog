@@ -1,0 +1,8 @@
+{
+  "name": "PangJian's Blog",
+  "short_name": "IO10",
+  "icons":[{}],
+  "background_color": "#F5F5F5",
+  "theme_color": "#0097A7",
+  "start_url": "/"
+}
