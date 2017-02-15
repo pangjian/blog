@@ -4,9 +4,9 @@
 
 # Head info
 head:
-    favicon: "favicon.png"
-    high_res_favicon: "/img/favicon.png"
-    apple_touch_icon: "favicon.png"
+    favicon: "favicon.ico"
+    high_res_favicon: "/icons/favicon.png"
+    apple_touch_icon: "/icons/favicon.png"
     keywords:
 
 # Jump Links Settings
