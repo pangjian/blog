@@ -36,7 +36,7 @@ render_drafts: false
 post_asset_folder: false
 relative_link: false
 highlight:
-  enable: true
+  enable: false
   line_number: false
   tab_replace:
 
@@ -92,6 +92,10 @@ plugins:
 - hexo-tag-video
 - hexo-filter-indicate-the-source
 
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'default'
+  line_number: false    # default false
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
