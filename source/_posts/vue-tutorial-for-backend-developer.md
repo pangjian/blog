@@ -33,14 +33,15 @@ npm 是 Nodejs 的包管理器，如果不好理解，可以把它类比成为 M
 如果使用 jQuery 实现，我们需要在输入框上监听`onkeydown`事件，在事件回调中将用户输入的数据通过操作 DOM 的方式显示在页面上。看起来也不是很难嘛。可是你想过么，如果需求变成了当后台返回的数据修改了页面展示的内容时，输入框内容也需要变化。那你就要写一堆的事件回调来监听 DOM 和输入的每一个变化，会大大增加编码的复杂程度，并且使代码变得几乎不可维护。
 
 如果使用 Vue 实现会是什么样呢？
-```HTML
+
+```html
 <div id="app">
   <p>{{ message }}</p>
   <input v-model="message">
 </div>
 ```
 
-```JavaScript
+```javascript
 var app = new Vue({
   el: '#app',
   data: {
@@ -48,6 +49,7 @@ var app = new Vue({
   }
 })
 ```
+
 这就是双向数据绑定！把 p 标签的展示内容和 input 输入的内容都与 data 中的 message 绑定，这样一来，input 内容的变化会改变 message 同时 vue 会将变化自动变更到 p 标签上。我想你一定能体验到双向数据绑定的魅力了。有了这种奇妙的特性，我们已经无需手工操作 DOM 了，一切都是数据，数据的变化自动会体现到页面的变化上去，我们再也不需要 jQuery 之类的了。
 ### 组件化应用
 组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、自包含和通常可复用的组件构建大型应用。仔细想想，几乎任意类型的应用界面都可以抽象为一个组件树：
@@ -55,19 +57,23 @@ var app = new Vue({
 ![组件树](/resources/vue-tutorial-for-backend-developer/component_tree.png)
 
 当我们创建了一个组件后
-```JavaScript
+
+```javascript
 // 定义名为 your-component 的新组件
 Vue.component('your-component', {
   template: '<li>这是个待办项</li>'
 })
 ```
+
 我们可以这样使用它
-```HTML
+
+```html
 <ol>
   <!-- 创建一个 your-component 组件的实例 -->
   <your-component></your-component>
 </ol>
 ```
+
 我们可以定义新的 HTML 标签，基于这个特性，我们可以开发一套自有的组件库，使开发者可以通过标签的方式引入我们的组件。
 
 ### 单文件组件
