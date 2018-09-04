@@ -16,9 +16,9 @@ language: zh-CN
 url: http://www.pangjian.me
 root: /
 permalink: :year/:month/:day/:title/
-tag_dir: tags
-archive_dir: archives
-category_dir: categories
+tag_dir: tags/
+archive_dir: archives/
+category_dir: categories/
 code_dir: downloads/code
 permalink_defaults:
 

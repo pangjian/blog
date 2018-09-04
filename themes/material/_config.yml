@@ -133,15 +133,15 @@ sidebar:
         divider: true
     pages:
         关于我:
-            link: "/About"
+            link: "/About/"
             icon: person
             divider: false
         标签云:
-            link: "/tags"
+            link: "/tags/"
             icon: 'cloud circle'
             divider: false
         友情链接:
-            link: "/links"
+            link: "/links/"
             icon: link
             divider: false
     article_num:
